@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* NavBar end */}
 
-        <ScrollView className='w-[100%]'>
+        <ScrollView className='w-[100%] mb-20'>
           <View className='flex items-center'>
             <PostCard/>
         <PostCard/>
