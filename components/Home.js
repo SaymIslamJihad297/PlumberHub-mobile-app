@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react'; // Add React import and use named import for useState
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PostCard from './PostCard';
+import NavBar from './NavBar';
+import SafeScreen from './SafeScreenProps';
 
 const tabs = ['Active Post', 'Assign', 'Completed', 'Cancel'];
 
@@ -10,7 +12,7 @@ export default function Home() {
 
   return (
     <View>
-      <View className='h-screen flex bg-[#f9f9f9] pt-[15%] flex items-center'>
+      <View className='h-full flex bg-[#f9f9f9] pt-[5%] flex items-center'>
 
         {/* Navbar start */}
         <Text className='text-2xl font-bold text-black text-center'>My Jobs</Text>
@@ -30,11 +32,16 @@ export default function Home() {
 
         {/* NavBar end */}
 
+        <ScrollView className='w-[100%]'>
+          <View className='flex items-center'>
+            <PostCard/>
         <PostCard/>
+          </View>
+        </ScrollView>
+
+        
       </View>
-      
-      
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   );
 }
